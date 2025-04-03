@@ -1,0 +1,7 @@
+logLevel = "debug"
+
+preload = ["./preload.js"]
+
+[run]
+shell = "bun"
+bun = true

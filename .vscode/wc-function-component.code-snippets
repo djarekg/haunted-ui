@@ -1,0 +1,27 @@
+"Web component funcion component": {
+	"scope": "javascript,typescript",
+  "prefix": "wcfc",
+  "body": [
+    "import { css, html } from 'lit';",
+    "",
+    "import { define, useStyles } from '@hui/core';",
+    "",
+    "const styles = css``;",
+    "",
+    "const ${TM_FILENAME_BASE/([a-z]*)(-)?/${1:/capitalize}/g} = () => {",
+    "  useStyles(styles);",
+    "",
+    "  return html``;",
+    "};",
+    "",
+    "define('${1|app,mui|}-${TM_FILENAME_BASE}', ${1});",
+    "",
+    "declare global {",
+    "  interface HTMLElementTagNameMap {",
+    "    '${1|app,mui|}-${TM_FILENAME_BASE}': HTMLElement;",
+    "  }",
+    "}",
+    ""
+  ],
+  "description": "Web Component function component"
+}

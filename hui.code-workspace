@@ -1,0 +1,180 @@
+{
+  "folders": [
+    {
+      "path": ".vscode"
+    },
+    {
+      "path": ".",
+      "name": "root"
+    },
+    {
+      "path": "packages",
+    },
+    {
+      "path": "apps"
+    }
+  ],
+  "settings": {
+    "bun.runtime": "$HOME/.bun/bin/bun",
+    "bun.debugTerminal.enabled": true,
+    "bun.debugTerminal.stopOnEntry": false,
+    "npm.packageManager": "bun",
+
+    "biome.experimental.rename": true,
+
+    "editor.lightbulb.enabled": "on",
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.insertSpaces": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.biome": "explicit",
+      "quickfix.biome": "explicit"
+      // "source.fixAll.biome": "explicit",
+    },
+    "editor.codeActions.triggerOnFocusChange": true,
+
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "on"
+    },
+    "editor.suggestSelection": "first",
+    "editor.roundedSelection": true,
+    "workbench.commandPalette.experimental.suggestCommands": true,
+    "editor.rulers": [100],
+    "editor.experimentalEditContextEnabled": true,
+    "editor.experimentalWhitespaceRendering": "font",
+    "editor.renderWhitespace": "none",
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "javascript.format.semicolons": "insert",
+    "javascript.preferences.importModuleSpecifier": "shortest",
+    "javascript.preferences.importModuleSpecifierEnding": "auto",
+    "javascript.suggest.completeJSDocs": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "typescript.autoClosingTags": true,
+    "typescript.check.npmIsInstalled": false,
+    "typescript.format.semicolons": "insert",
+    "typescript.inlayHints.parameterTypes.enabled": false,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifierEnding": "js",
+    "typescript.preferences.includePackageJsonAutoImports": "on",
+    "typescript.preferences.preferTypeOnlyAutoImports": true,
+    "typescript.suggest.autoImports": true,
+    "typescript.suggest.completeJSDocs": true,
+    "typescript.suggest.includeCompletionsForImportStatements": true,
+    "typescript.suggest.jsdoc.generateReturns": true,
+    "typescript.tsdk": "../node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+    "typescript.updateImportsOnFileMove.enabled": "prompt",
+    // "typescript.workspaceSymbols.excludeLibrarySymbols": true,
+    // "typescript.workspaceSymbols.scope": "allOpenProjects",
+
+    "[typescript]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+
+    "json.validate.enable": false,
+    "[json]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[prisma]": {
+      "editor.defaultFormatter": "Prisma.prisma-insider"
+    },
+    "[toml]": {
+      "editor.defaultFormatter": "tamasfe.even-better-toml"
+    },
+
+    "yaml.schemas": {
+      "https://taskfile.dev/schema.json": ["**/Taskfile.yml", "./path/to/any/other/taskfile.yml"]
+    },
+
+    "jspm.generate.defaultConditions": "development,browser,module",
+    "jspm.generate.preload": "ask",
+    "jspm.generate.integrity": true,
+
+    "css.hover.documentation": false,
+    "css.hover.references": false,
+    "html.hover.references": false,
+    "html.hover.documentation": false,
+    "html.autoClosingTags": false,
+    "html.format.maxPreserveNewLines": 1,
+    "html.autoCreateQuotes": true,
+    "html.format.indentInnerHtml": true,
+
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/cdk.out": true,
+      "**/dist": true,
+      "**/build": true,
+      "**/public": true,
+      "CHANGELOG.md": true,
+      "bun.lock": true
+    },
+
+    "files.exclude": {
+      "**/.out": true,
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true
+    },
+
+    "workbench.editor.labelFormat": "medium",
+
+    "task.autoDetect": "off",
+    "task.allowAutomaticTasks": "off",
+    "task.quickOpen.detail": true,
+    "task": {
+      "tree": {
+        "nesting": false,
+        "sort": "none"
+      }
+    },
+    "task.quickOpen.showAll": false,
+
+    "github.copilot.chat.edits.suggestRelatedFilesForTests": false,
+
+    // "lit-html.format.enabled": true,
+    // "lit-html.tags": ["html", "raw", "css"],
+
+    "[yaml]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+
+    // christian-kohler.path-intellisense - required for extension to work
+    "typescript.suggest.paths": false,
+    "javascript.suggest.paths": false,
+
+    // recommended ApolloGraphQL extension settings.
+    // https://github.com/apollographql/vscode-graphql/blob/main/sampleWorkspace/sampleWorkspace.code-workspace
+    "apollographql.devTools.showPanel": "detect",
+    "apollographql.devTools.serverPort": 7095
+  },
+  "extensions": {
+    "recommendations": [
+      "biomejs.biome",
+      "oven.bun-vscode",
+      "jspm.jspm-vscode",
+      "prisma.prisma-insider",
+      "task.vscode-task",
+      "runem.lit-plugin",
+      "apollographql.vscode-apollo"
+    ]
+  }
+}

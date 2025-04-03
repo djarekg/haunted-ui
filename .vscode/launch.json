@@ -1,0 +1,136 @@
+{
+  "configurations": [
+    {
+      "name": "Launch api",
+      "cwd": "${workspaceFolder}/apps/api",
+      "request": "launch",
+      "type": "node-terminal",
+      "noDebug": false,
+      "command": "bun run dev:debug",
+      "skipFiles": ["**/<node_internals>/**", "**/node_modules/**", "!**/node_modules/@hui/**"],
+      "sourceMaps": true,
+      "smartStep": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "presentation": {
+        "hidden": false,
+        "group": "2",
+        "order": 1
+      }
+    },
+    {
+      "name": "Launch api:swagger",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://localhost:4003/swagger",
+      "webRoot": "${workspaceFolder}/apps/api/src",
+      "userDataDir": "${workspaceFolder}/.out/edge/apps/api",
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "cwd": "${workspaceFolder}/apps/api",
+      "smartStep": true,
+      "presentation": {
+        "hidden": false,
+        "group": "2",
+        "order": 2
+      }
+    },
+    {
+      "name": "Launch demo:serve",
+      "cwd": "${workspaceFolder}/apps/demo",
+      "request": "launch",
+      "type": "node-terminal",
+      "noDebug": false,
+      "command": "bun run dev",
+      "skipFiles": ["**/<node_internals>/**", "**/node_modules/**", "!**/node_modules/@hui/**"],
+      "sourceMaps": true,
+      "smartStep": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "presentation": {
+        "hidden": false,
+        "group": "3",
+        "order": 1
+      }
+    },
+    {
+      "name": "Launch demo:client (edge)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://localhost:3003/",
+      "webRoot": "${workspaceFolder}/apps/demo/src",
+      "userDataDir": "${workspaceFolder}/.out/edge/apps",
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "cwd": "${workspaceFolder}/apps/demo",
+      "smartStep": true,
+      "presentation": {
+        "hidden": false,
+        "group": "3",
+        "order": 2
+      }
+    },
+    {
+      "name": "Launch demo:client (chrome)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:3003/",
+      "webRoot": "${workspaceFolder}/apps/demo/src",
+      "userDataDir": "${workspaceFolder}/.out/chrome/apps",
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "cwd": "${workspaceFolder}/apps/demo",
+      "smartStep": true,
+      "presentation": {
+        "hidden": false,
+        "group": "3",
+        "order": 2
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug api",
+      "configurations": ["Launch api", "Launch api:swagger"],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "1",
+        "order": 2
+      }
+    },
+    {
+      "name": "Debug demo (edge)",
+      "configurations": ["Launch api", "Launch demo:serve", "Launch demo:client (edge)"],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "1",
+        "order": 1
+      }
+    },
+    {
+      "name": "Debug demo (chrome)",
+      "configurations": ["Launch api", "Launch demo:serve", "Launch demo:client (chrome)"],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "1",
+        "order": 1
+      }
+    },
+    {
+      "name": "Debug demo (w/ swagger)",
+      "configurations": [
+        "Launch api",
+        "Launch api:swagger",
+        "Launch demo:serve",
+        "Launch demo:client"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "1",
+        "order": 1
+      }
+    }
+  ]
+}

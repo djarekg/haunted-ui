@@ -1,0 +1,67 @@
+{
+  "name": "@hui/api",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Dustin Griffith",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djarekg/haunted-ui"
+  },
+  "license": "MIT",
+  "packageManager": "bun",
+  "engines": {
+    "bun": ">=1.2.8"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "db:generate": "rm -rf prisma/dev.db prisma/img && bunx prisma generate && bunx prisma db push && bun prisma/seed/seed.ts",
+    "dev": "bun src/server.ts",
+    "dev:debug": "bun --inspect=localhost:4004 --watch src/server.ts",
+    "build": "task build"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "@apollo/utils.keyvaluecache": "^3.1.0",
+    "@elysiajs/apollo": "^1.2.0",
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/cors": "^1.2.0",
+    "@elysiajs/jwt": "^1.2.0",
+    "@elysiajs/swagger": "^1.2.2",
+    "@hui/graphql": "workspace:*",
+    "@prisma/client": "^6.5.0",
+    "elysia": "1.2.25",
+    "graphql": "^16.10.0",
+    "graphql-fields": "^2.0.3",
+    "graphql-scalars": "^1.24.2",
+    "reflect-metadata": "^0.2.2",
+    "type-graphql": "^2.0.0-rc.2",
+    "unsplash-js": "^7.0.19"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "@types/bun": "^1.2.8",
+    "prisma": "^6.5.0",
+    "typegraphql-prisma": "^0.28.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "trustedDependencies": [
+    "@apollo/protobufjs",
+    "core-js",
+    "core-js-pure",
+    "yarn",
+    "@prisma/client",
+    "@prisma/engines",
+    "prisma"
+  ]
+}

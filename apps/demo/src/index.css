@@ -1,0 +1,15 @@
+@import "styles/_content.css";
+
+:host {
+  --mui-table-row-hover-color: #fff;
+  --mui-table-row-hover-background-color: rgba(0, 0, 0, 0.2);
+  --mui-table-background-color: var(--mui-palette-surface-a0);
+
+  display: block;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+*:not(:defined) {
+  display: none;
+}

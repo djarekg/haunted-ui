@@ -1,0 +1,17 @@
+version: "3"
+
+includes:
+  root-task: ../../taskfile.yml
+
+tasks:
+  build:
+    desc: Build the project
+    cmds:
+      - task: root-task:build
+      - |
+        mkdir -p dist && cd dist && mkdir -p theme && cd ..
+        if [[ {{OS}} == "windows" ]]; then
+          copy src\\theme\\theme.css dist\\theme\\theme.css
+        else
+          cp src/theme/theme.css dist/theme/theme.css
+        fi

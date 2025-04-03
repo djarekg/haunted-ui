@@ -1,0 +1,39 @@
+{
+  "name": "@hui/graphql",
+  "version": "1.0.0",
+  "author": "Dustin Griffith",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djarekg/haunted-ui"
+  },
+  "engines": {
+    "bun": ">=1.2.8"
+  },
+  "license": "MIT",
+  "packageManager": "bun",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "task build",
+    "build": "task build"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.13.4",
+    "@hui/core": "workspace:*",
+    "crypto-hash": "^3.1.0",
+    "graphql": "^16.10.0",
+    "haunted": "^6.1.0"
+  },
+  "devDependencies": {
+    "@apollo/client": "^3.13.5",
+    "@apollo/client-devtools-vscode": "^4.19.11",
+    "@types/bun": "^1.2.8"
+  }
+}

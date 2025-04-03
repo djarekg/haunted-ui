@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "outDir": "${configDir}/dist",
+    "tsBuildInfoFile": "${configDir}/dist/.tsbuildinfo",
+    "disableSourceOfProjectReferenceRedirect": true,
+
+    // Enable latest features
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleDetection": "force",
+    "allowJs": false,
+    "jsx": "react-jsx",
+    "downlevelIteration": true,
+
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "verbatimModuleSyntax": true,
+    "sourceMap": false,
+    "composite": true,
+    "incremental": true,
+    "esModuleInterop": false,
+    "resolvePackageJsonExports": true,
+
+    // Best practices
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "alwaysStrict": true,
+    "strict": true,
+
+    // Some stricter flags (disabled by default)
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictPropertyInitialization": false,
+    "noImplicitOverride": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": false,
+    "noPropertyAccessFromIndexSignature": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": true,
+    "skipLibCheck": true,
+
+    "paths": {
+      "@/*": ["${configDir}/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

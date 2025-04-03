@@ -1,0 +1,14 @@
+{
+  "extends": ["../../config/tsconfig.base.json", "../../config/tsconfig.node.json"],
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "baseUrl": "src",
+    "rootDir": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@hui/graphql/*": ["../../packages/graphql/*"]
+    }
+  },
+  "include": ["src/**/*", "prisma/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

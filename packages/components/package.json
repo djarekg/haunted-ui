@@ -1,0 +1,36 @@
+{
+  "name": "@hui/components",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "packageManager": "bun",
+  "author": "Dustin Griffith",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djarekg/haunted-ui"
+  },
+  "engines": {
+    "bun": ">=1.2.8"
+  },
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "task build",
+    "build": "task build"
+  },
+  "dependencies": {
+    "@hui/core": "workspace:*",
+    "lit": "^3.2.1",
+    "haunted": "^6.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

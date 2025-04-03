@@ -1,0 +1,11 @@
+version: '3'
+
+includes:
+  root-task: ../../taskfile.yml
+
+tasks:
+  build:
+    desc: Build the project
+    cmds:
+      - task: root-task:build
+

@@ -1,0 +1,20 @@
+version: "3"
+
+tasks:
+  build:
+    desc: Build the project
+    cmds:
+      - task: build:clean
+      - task: build:ts
+
+  build:clean:
+    internal: true
+    desc: Clean the project
+    cmds:
+      - rm -rf dist node_modules
+
+  build:ts:
+    desc: Build typescript
+    deps: [build:clean]
+    cmds:
+      - bun build src/index.ts --root-=src --outdir=dist --target=browser --packages=external --sourcemap=linked

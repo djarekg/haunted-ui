@@ -1,0 +1,12 @@
+{
+  "extends": ["../../config/tsconfig.base.json", "../../config/tsconfig.lit.json"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": "src",
+    "resolveJsonModule": true,
+    "paths": {
+      "@hui/core/*": ["../core/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

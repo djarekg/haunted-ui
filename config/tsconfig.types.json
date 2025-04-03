@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "rootDir": "${configDir}/src",
+    "outDir": "${configDir}/dist",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "target": "ESNext",
+    "paths": {
+      "@/*": ["${configDir}/src/*"]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@hui/workspace",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Dustin Griffith",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djarekg/haunted-ui"
+  },
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "bun",
+  "engines": {
+    "bun": ">=1.2.8"
+  },
+  "scripts": {
+    "setup": "task install",
+    "//postsetup": "bun run --filter './apps/api' db:generate && bun run build:all",
+    "postsetup": "bun run build:all",
+    "build:packages": "bun run --filter './packages/core' build && bun run --filter './packages/components' build && bun run --filter './packages/graphql' build && bun run --filter './packages/router' build",
+    "build:apps": "bun run --filter './apps/*' build",
+    "build:all": "bun run build:packages && bun run --filter './apps/api' build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "^1.2.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "overrides": {
+    "graphql": "^16.10.0",
+    "haunted": "^6.1.0",
+    "lit": "^3",
+    "typescript": "^5.8.2"
+  },
+  "workspaces": ["apps/*", "packages/*"],
+  "trustedDependencies": ["@biomejs/biome"]
+}

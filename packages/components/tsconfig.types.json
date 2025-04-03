@@ -1,0 +1,11 @@
+{
+  "extends": "../../config/tsconfig.types.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "allowArbitraryExtensions": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

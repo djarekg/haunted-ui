@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"composite": false,
+		"plugins": [
+			{
+				"name": "ts-lit-plugin",
+				"strict": true
+			}
+		]
+	},
+	"files": [],
+	"references": [
+		{
+			"path": "./apps/api"
+		},
+		{
+			"path": "./apps/demo"
+		},
+		{
+			"path": "./packages/components"
+		},
+		{
+			"path": "./packages/core"
+		},
+		{
+			"path": "./packages/graphql"
+		},
+		{
+			"path": "./packages/router"
+		}
+	]
+}

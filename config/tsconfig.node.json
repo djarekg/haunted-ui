@@ -1,0 +1,9 @@
+{
+  "declaration": true,
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "types": ["node"]
+  },
+  "files": []
+}

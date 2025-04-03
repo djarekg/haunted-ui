@@ -1,0 +1,43 @@
+version: "3"
+
+tasks:
+  install:
+    aliases: [workspace]
+    desc: Initialize the projec
+    cmds:
+      - task: install:clean
+      - task: install:workspace
+
+  install:clean:
+    internal: true
+    desc: Clean the project
+    cmds:
+      - bunx rimraf -g **/node_modules **/bun.lock **/dist
+
+  install:workspace:
+    desc: Install dependencies
+    deps: [install:clean]
+    cmds:
+      - bun install
+
+  build:
+    desc: Build the project
+    cmds:
+      - task: build:clean
+      - task: build:ts
+      - task: build:typings
+
+  build:clean:
+    desc: Clean the project
+    cmds:
+      - rm -rf dist
+
+  build:ts:
+    desc: Build typescript
+    cmds:
+      - bun build src/**/*.ts --root src --outdir dist --splitting --packages external --packages external --sourcemap=inline {{.CLI_ARGS}}
+
+  build:typings:
+    desc: Build typings
+    cmds:
+      - bun tsc -p tsconfig.types.json {{.CLI_ARGS}}

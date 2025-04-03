@@ -1,0 +1,12 @@
+{
+  "declaration": true,
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "allowArbitraryExtensions": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "types": ["lit"]
+  },
+  "files": []
+}

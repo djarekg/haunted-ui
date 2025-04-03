@@ -1,0 +1,30 @@
+{
+  "extends": ["../../config/tsconfig.base.json", "../../config/tsconfig.lit.json"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "rootDir": ".",
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": ["./*"],
+      "@hui/api/*": ["../api/*"],
+      "@hui/components/*": ["../../packages/components/*"],
+      "@hui/core/*": ["../../packages/core/*"],
+      "@hui/graphql/*": ["../../packages/graphql/*"],
+      "@hui/router/*": ["../../packages/router/*"]
+    },
+
+    // required by vite
+    "isolatedModules": true,
+    "useDefineForClassFields": false,
+
+    // required by graphql-codegen
+    "plugins": [
+      {
+        "name": "@0no-co/graphqlsp",
+        "schema": "./graphql/schema.graphql"
+      }
+    ]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
