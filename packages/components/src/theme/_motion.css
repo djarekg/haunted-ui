@@ -1,0 +1,82 @@
+:root {
+  /* Emphasized decelerate easing (out) */
+  --mui-motion-easing-emphasized-decelerate-x0: 0.05000000074505806;
+  --mui-motion-easing-emphasized-decelerate-y0: 0.699999988079071;
+  --mui-motion-easing-emphasized-decelerate-x1: 0.10000000149011612;
+  --mui-motion-easing-emphasized-decelerate-y1: 1;
+  /* Emphasized accelerate easing (in) */
+  --mui-motion-easing-emphasized-accelerate-x0: 0.30000001192092896;
+  --mui-motion-easing-emphasized-accelerate-y0: 0;
+  --mui-motion-easing-emphasized-accelerate-x1: 0.800000011920929;
+  --mui-motion-easing-emphasized-accelerate-y1: 0.15000000596046448;
+  /* Standard decelerate easing (out) */
+  --mui-motion-easing-standard-decelerate-x0: 0;
+  --mui-motion-easing-standard-decelerate-y0: 0;
+  --mui-motion-easing-standard-decelerate-x1: 0;
+  --mui-motion-easing-standard-decelerate-y1: 1;
+  /* Standard accelerate easing (in) */
+  --mui-motion-easing-standard-accelerate-x0: 0.30000001192092896;
+  --mui-motion-easing-standard-accelerate-y0: 0;
+  --mui-motion-easing-standard-accelerate-x1: 1;
+  --mui-motion-easing-standard-accelerate-y1: 1;
+  /* Duration 1000ms */
+  --mui-motion-duration-1000: 1000ms;
+  /* Duration 900ms */
+  --mui-motion-duration-900: 900ms;
+  /* Duration 800ms */
+  --mui-motion-duration-800: 800ms;
+  /* Duration 700ms */
+  --mui-motion-duration-700: 700ms;
+  /* Duration 600ms */
+  --mui-motion-duration-600: 600ms;
+  /* Duration 550ms */
+  --mui-motion-duration-550: 550ms;
+  /* Duration 500ms */
+  --mui-motion-duration-500: 500ms;
+  /* Duration 450ms */
+  --mui-motion-duration-450: 450ms;
+  /* Duration 400ms */
+  --mui-motion-duration-400: 400ms;
+  /* Duration 350ms */
+  --mui-motion-duration-350: 350ms;
+  /* Duration 300ms */
+  --mui-motion-duration-300: 300ms;
+  /* Duration 250ms */
+  --mui-motion-duration-250: 250ms;
+  /* Duration 200ms */
+  --mui-motion-duration-200: 200ms;
+  /* Duration 150ms */
+  --mui-motion-duration-150: 150ms;
+  /* Duration 100ms */
+  --mui-motion-duration-100: 100ms;
+  /* Duration 50ms */
+  --mui-motion-duration-50: 50ms;
+  /* Standard easing (in and out) */
+  --mui-motion-easing-standard-x0: 0.20000000298023224;
+  --mui-motion-easing-standard-y0: 0;
+  --mui-motion-easing-standard-x1: 0;
+  --mui-motion-easing-standard-y1: 1;
+  /* Linear easing */
+  --mui-motion-easing-linear-x0: 0;
+  --mui-motion-easing-linear-y0: 0;
+  --mui-motion-easing-linear-x1: 1;
+  --mui-motion-easing-linear-y1: 1;
+  /* Emphasized */
+  --mui-motion-easing-emphasized-x0: 0.20000000298023224;
+  --mui-motion-easing-emphasized-y0: 0;
+  --mui-motion-easing-emphasized-x1: 0;
+  --mui-motion-easing-emphasized-y1: 1;
+  /* Motion path */
+  --mui-motion-path-standard-path: 1;
+  /* shorthand */
+  --mui-motion-easing-emphasized: cubic-bezier(
+    var(--mui-motion-easing-emphasized-x0),
+    var(--mui-motion-easing-emphasized-y0),
+    var(--mui-motion-easing-emphasized-x1),
+    var(--mui-motion-easing-emphasized-y1)
+  );
+  --mui-motion-standard-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --mui-motion-acceleration-easing: cubic-bezier(0.4, 0, 1, 1);
+  --mui-motion-deceleration-easing: cubic-bezier(0, 0, 0.2, 1);
+  --mui-motion-sharp-easing: cubic-bezier(0.4, 0, 0.6, 1);
+}

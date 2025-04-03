@@ -108,6 +108,16 @@
       }
     },
     {
+      "name": "Debug demo (edge) NO API",
+      "configurations": ["Launch demo:serve", "Launch demo:client (edge)"],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "1",
+        "order": 1
+      }
+    },
+    {
       "name": "Debug demo (chrome)",
       "configurations": ["Launch api", "Launch demo:serve", "Launch demo:client (chrome)"],
       "stopAll": true,

@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "@github/memoize": "^1.1.5",
-    "haunted": "^6.1.0"
+    "haunted": "^6.1.0",
+    "stylis": "^4.3.6"
   },
   "devDependencies": {
     "@types/bun": "^1.2.8",

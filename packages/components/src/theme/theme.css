@@ -1,0 +1,13 @@
+@import "_palette.css";
+@import "_variables.css";
+@import "_shape.css";
+@import "_elevation.css";
+@import "_typography.css";
+@import "_content.css";
+@import "_motion.css";
+@import "_defaults.css";
+
+.bg-primary {
+  color: var(--mui-color-primary);
+  background-color: var(--mui-palette-surface-a0);
+}

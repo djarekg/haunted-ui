@@ -1,0 +1,9 @@
+:root {
+  --mui-shape-xsmall: 4px;
+  --mui-shape-small: 6px;
+  --mui-shape-medium-inner: 10px;
+  --mui-shape-medium: 12px;
+  --mui-shape-large: 16px;
+  --mui-shape-round: 9999px;
+  --mui-shape-medium-smooth: 50%;
+}

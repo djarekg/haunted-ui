@@ -1,0 +1,36 @@
+@import "normalize.css";
+
+:root {
+  --app-main-padding: 1rem;
+}
+
+body {
+  inline-size: 100vw;
+  block-size: 100vh;
+  min-inline-size: 320px;
+  min-block-size: 100vh;
+
+  font-family: var(--mui-typescale-body-large-font);
+  font-size: var(--mui-typescale-body-large-size);
+  font-weight: var(--mui-typescale-body-large-weight);
+  letter-spacing: var(--mui-typescale-body-large-tacking);
+  line-height: var(--mui-typescale-body-large-line-height);
+
+  background-color: var(--mui-color-secondary);
+  color: var(--mui-color-primary);
+  direction: ltr;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  transition: color 0.5s, background-color 0.5s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+::view-transition-old(*) {
+  animation-duration: 0.5s;
+}
+::view-transition-new(*) {
+  animation-duration: 0.7s;
+}
