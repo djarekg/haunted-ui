@@ -1,5 +1,5 @@
 import { useCallback, useLayoutEffect } from 'haunted';
-import { type CSSResult, supportsAdoptingStyleSheets } from 'lit-element';
+import { type CSSResult, type LitElement, supportsAdoptingStyleSheets } from 'lit-element';
 import { compile, serialize, stringify } from 'stylis';
 
 import { hash } from '../crypto/hash.js';
@@ -50,16 +50,22 @@ export function useStyles(styles: CSSResult | CSSResult[]) {
               newStyle.textContent = serializedCss;
               newStyle.setAttribute('id', id);
 
-              const parent = el.parentNode;
-
-              if (parent.children.length > 1) {
-                throw new Error('The can only be one HTML element at the root of the component.');
-              }
+              let parent = el.parentNode;
 
               const firstElement = parent.firstElementChild;
               const wrapperElement = wrap(firstElement);
               wrapperElement.classList.add(id);
-              parent.prepend(newStyle);
+
+              // Look for the first parent that is a custom element.
+              while (!('host' in parent)) {
+                parent = parent.parentNode;
+              }
+
+              // Prepend all styles to the shadowRoot of the closest custom element.
+              if (parent.host) {
+                const host = parent.host as LitElement;
+                host.shadowRoot.prepend(newStyle);
+              }
             }
           }
         }
