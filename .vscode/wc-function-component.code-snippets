@@ -14,11 +14,11 @@
     "  return html``;",
     "};",
     "",
-    "define('${1|app,mui|}-${TM_FILENAME_BASE}', ${1});",
+    "define('${1|app,hui|}-${TM_FILENAME_BASE}', ${1});",
     "",
     "declare global {",
     "  interface HTMLElementTagNameMap {",
-    "    '${1|app,mui|}-${TM_FILENAME_BASE}': HTMLElement;",
+    "    '${1|app,hui|}-${TM_FILENAME_BASE}': HTMLElement;",
     "  }",
     "}",
     ""

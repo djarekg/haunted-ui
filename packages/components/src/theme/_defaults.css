@@ -1,6 +1,6 @@
 :root {
-  --mui-site-header-height: 58px;
-  --mui-site-footer-height: 58px;
+  --hui-site-header-height: 58px;
+  --hui-site-footer-height: 58px;
 }
 
 *,
@@ -14,8 +14,8 @@ html:has(dialog[open]) {
 }
 
 html {
-  background-color: var(--mui-color-background);
-  color: var(--mui-color-text);
+  background-color: var(--hui-color-background);
+  color: var(--hui-color-text);
 }
 
 body {
@@ -24,15 +24,15 @@ body {
   min-inline-size: 320px;
   min-block-size: 100vh;
 
-  font-family: var(--mui-typescale-body-large-font);
-  font-feature-settings: var(--mui-typeface-font-feature-settings);
-  font-size: var(--mui-typescale-body-large-size);
-  font-weight: var(--mui-typescale-body-large-weight);
-  letter-spacing: var(--mui-typescale-body-large-tacking);
-  line-height: var(--mui-typescale-body-large-line-height);
+  font-family: var(--hui-typescale-body-large-font);
+  font-feature-settings: var(--hui-typeface-font-feature-settings);
+  font-size: var(--hui-typescale-body-large-size);
+  font-weight: var(--hui-typescale-body-large-weight);
+  letter-spacing: var(--hui-typescale-body-large-tacking);
+  line-height: var(--hui-typescale-body-large-line-height);
 
-  background-color: var(--mui-color-background);
-  color: var(--mui-color-text);
+  background-color: var(--hui-color-background);
+  color: var(--hui-color-text);
   direction: ltr;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -97,7 +97,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: var(--mui-typeface-font);
+  font-family: var(--hui-typeface-font);
 }
 
 img,
@@ -166,17 +166,17 @@ input {
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: var(--mui-color-text-3);
+  color: var(--hui-color-text-3);
 }
 
 input::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
-  color: var(--mui-color-text-3);
+  color: var(--hui-color-text-3);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--mui-color-text-3);
+  color: var(--hui-color-text-3);
 }
 
 input::-webkit-outer-spin-button,

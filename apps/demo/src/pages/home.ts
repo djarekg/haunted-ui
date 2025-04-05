@@ -14,16 +14,16 @@ const styles = css`
   img {
     block-size: 300px;
     inline-size: 300px;
-    transition: transform 700ms;
+    transition: transform 800ms;
 
     &:hover {
-      transform: scale(2);
-      transition: transform 200ms;
+      transform: scale(1.5);
+      transition: transform 300ms;
     }
   }
 `;
 
-const Index = () => {
+const Home = () => {
   useStyles(styles);
 
   return html`
@@ -31,7 +31,7 @@ const Index = () => {
   `;
 };
 
-define('app-home-page', Index);
+define('app-home-page', Home);
 
 declare global {
   interface HTMLElementTagNameMap {

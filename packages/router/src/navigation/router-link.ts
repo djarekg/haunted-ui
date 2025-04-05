@@ -32,4 +32,4 @@ class RouterLink extends HTMLAnchorElement {
   }
 }
 
-customElements.define('mui-router-link', RouterLink, { extends: 'a' });
+customElements.define('hui-router-link', RouterLink, { extends: 'a' });

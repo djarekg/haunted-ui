@@ -1,9 +1,9 @@
 :root {
-  --mui-shape-xsmall: 4px;
-  --mui-shape-small: 6px;
-  --mui-shape-medium-inner: 10px;
-  --mui-shape-medium: 12px;
-  --mui-shape-large: 16px;
-  --mui-shape-round: 9999px;
-  --mui-shape-medium-smooth: 50%;
+  --hui-shape-xsmall: 4px;
+  --hui-shape-small: 6px;
+  --hui-shape-medium-inner: 10px;
+  --hui-shape-medium: 12px;
+  --hui-shape-large: 16px;
+  --hui-shape-round: 9999px;
+  --hui-shape-medium-smooth: 50%;
 }

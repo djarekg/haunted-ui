@@ -8,7 +8,7 @@ export const routes: Routes<TemplateResult | typeof nothing> = {
   [routeType.home]: {
     name: 'home',
     entry: () => {
-      import('../pages/index.js');
+      import('../pages/home.js');
       return html`<app-home-page></app-home-page>`;
     },
   },

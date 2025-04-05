@@ -42,7 +42,7 @@ export function useStyles(styles: CSSResult | CSSResult[]) {
              * if the style is already in the document to avoid adding duplicate styles.
              * We do this by hashing the style content and using the hash as the style id.
              */
-            const id = `mui${hash(style.cssText).toString()}`;
+            const id = `hui${hash(style.cssText).toString()}`;
 
             // If the style is not already in the document, add it.
             if (!el.parentNode.querySelector(`#${id}`)) {

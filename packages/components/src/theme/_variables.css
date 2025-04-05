@@ -1,149 +1,149 @@
 :root {
   /** Dark theme primary colors */
-  --mui-palette-primary-a0: #711fee;
-  --mui-palette-primary-a0-hsl: hsl(264, 86%, 53%);
-  --mui-palette-primary-a10: #863ff1;
-  --mui-palette-primary-a20: #9958f4;
-  --mui-palette-primary-a30: #ab71f6;
-  --mui-palette-primary-a40: #bb88f8;
-  --mui-palette-primary-a50: #caa0fa;
+  --hui-palette-primary-a0: #711fee;
+  --hui-palette-primary-a0-hsl: hsl(264, 86%, 53%);
+  --hui-palette-primary-a10: #863ff1;
+  --hui-palette-primary-a20: #9958f4;
+  --hui-palette-primary-a30: #ab71f6;
+  --hui-palette-primary-a40: #bb88f8;
+  --hui-palette-primary-a50: #caa0fa;
 
   /** Dark theme surface colors */
-  --mui-palette-surface-a0: #1d222e;
-  --mui-palette-surface-a0-hsl: hsl(222, 23%, 15%);
-  --mui-palette-surface-a05: #252833;
-  --mui-palette-surface-a10: #323742;
-  --mui-palette-surface-a20: #494c57;
-  --mui-palette-surface-a30: #60636d;
-  --mui-palette-surface-a40: #797b84;
-  --mui-palette-surface-a50: #92949b;
+  --hui-palette-surface-a0: #1d222e;
+  --hui-palette-surface-a0-hsl: hsl(222, 23%, 15%);
+  --hui-palette-surface-a05: #252833;
+  --hui-palette-surface-a10: #323742;
+  --hui-palette-surface-a20: #494c57;
+  --hui-palette-surface-a30: #60636d;
+  --hui-palette-surface-a40: #797b84;
+  --hui-palette-surface-a50: #92949b;
 
   /** Dark theme tonal surface colors */
-  --mui-palette-surface-tonal-a0: #22313b;
-  --mui-palette-surface-tonal-a0-hsl: hsl(204, 27%, 18%);
-  --mui-palette-surface-tonal-a10: #37454e;
-  --mui-palette-surface-tonal-a20: #4e5a62;
-  --mui-palette-surface-tonal-a30: #656f77;
-  --mui-palette-surface-tonal-a40: #7d868c;
-  --mui-palette-surface-tonal-a50: #959da2;
+  --hui-palette-surface-tonal-a0: #22313b;
+  --hui-palette-surface-tonal-a0-hsl: hsl(204, 27%, 18%);
+  --hui-palette-surface-tonal-a10: #37454e;
+  --hui-palette-surface-tonal-a20: #4e5a62;
+  --hui-palette-surface-tonal-a30: #656f77;
+  --hui-palette-surface-tonal-a40: #7d868c;
+  --hui-palette-surface-tonal-a50: #959da2;
 
   /** colors */
-  --mui-palette-color-green: #2dd4bf;
-  --mui-palette-color-hot-pink: #ff0ea9;
-  --mui-palette-color-purple: #711fee;
-  --mui-palette-color-teal: #00daff;
+  --hui-palette-color-green: #2dd4bf;
+  --hui-palette-color-hot-pink: #ff0ea9;
+  --hui-palette-color-purple: #711fee;
+  --hui-palette-color-teal: #00daff;
 
   /* Alert colors */
-  --mui-color-alert-error: #f44336;
-  --mui-color-alert-info: #3857f3;
-  --mui-color-alert-debug: #9a44c2;
-  --mui-color-alert-success: #58ae5b;
-  --mui-color-alert-warning: #ff9800;
+  --hui-color-alert-error: #f44336;
+  --hui-color-alert-info: #3857f3;
+  --hui-color-alert-debug: #9a44c2;
+  --hui-color-alert-success: #58ae5b;
+  --hui-color-alert-warning: #ff9800;
 
   /* Black */
-  --mui-palette-black: #000000ff;
+  --hui-palette-black: #000000ff;
   /* White */
-  --mui-palette-white: #ffffffff;
+  --hui-palette-white: #ffffffff;
 
-  --mui-color-primary: var(--mui-palette-primary-a0);
-  --mui-color-primary-hsl: var(--mui-palette-primary-a0-hsl);
-  --mui-color-secondary: var(--mui-palette-secondary-a0);
-  --mui-color-secondary-hsl: var(--mui-palette-secondary-a0-hsl);
+  --hui-color-primary: var(--hui-palette-primary-a0);
+  --hui-color-primary-hsl: var(--hui-palette-primary-a0-hsl);
+  --hui-color-secondary: var(--hui-palette-secondary-a0);
+  --hui-color-secondary-hsl: var(--hui-palette-secondary-a0-hsl);
 
-  --mui-color-background: var(--mui-palette-surface-a0);
-  --mui-color-on-background: var(--mui-palette-surface-a50);
-  --mui-color-text: var(--mui-palette-white);
-  /* --mui-color-background-hover: var(--mui-palette-surface-tonal-a30); */
-  --mui-color-background-hover: var(--mui-palette-surface-tonal-a10);
-  /* --mui-color-background-hover: var(--mui-color-secondary); */
+  --hui-color-background: var(--hui-palette-surface-a0);
+  --hui-color-on-background: var(--hui-palette-surface-a50);
+  --hui-color-text: var(--hui-palette-white);
+  /* --hui-color-background-hover: var(--hui-palette-surface-tonal-a30); */
+  --hui-color-background-hover: var(--hui-palette-surface-tonal-a10);
+  /* --hui-color-background-hover: var(--hui-color-secondary); */
 
-  --mui-color-border: var(--mui-palette-surface-tonal-a20);
-  --mui-color-header: rgba(40, 41, 42, 0.6);
-  --mui-color-hover: rgba(40, 41, 42, 0.6);
+  --hui-color-border: var(--hui-palette-surface-tonal-a20);
+  --hui-color-header: rgba(40, 41, 42, 0.6);
+  --hui-color-hover: rgba(40, 41, 42, 0.6);
 
-  --mui-icon-size: 24px;
-  --mui-color-icon: #fff;
+  --hui-icon-size: 24px;
+  --hui-color-icon: #fff;
 
   /* colors */
-  --mui-color-green: var(--mui-palette-color-green);
-  --mui-color-hot-pink: var(--mui-palette-color-hot-pink);
-  --mui-color-purple: var(--mui-palette-color-purple);
-  --mui-color-teal: var(--mui-palette-color-teal);
-  --mui-color-blue: #3857f3;
+  --hui-color-green: var(--hui-palette-color-green);
+  --hui-color-hot-pink: var(--hui-palette-color-hot-pink);
+  --hui-color-purple: var(--hui-palette-color-purple);
+  --hui-color-teal: var(--hui-palette-color-teal);
+  --hui-color-blue: #3857f3;
 }
 
 .purple {
   /** Dark theme primary colors */
-  --mui-palette-primary-a0: #711fee;
-  --mui-palette-primary-a0-hsl: hsl(264, 86%, 53%);
-  --mui-palette-primary-a10: #863ff1;
-  --mui-palette-primary-a20: #9958f4;
-  --mui-palette-primary-a30: #ab71f6;
-  --mui-palette-primary-a40: #bb88f8;
-  --mui-palette-primary-a50: #caa0fa;
+  --hui-palette-primary-a0: #711fee;
+  --hui-palette-primary-a0-hsl: hsl(264, 86%, 53%);
+  --hui-palette-primary-a10: #863ff1;
+  --hui-palette-primary-a20: #9958f4;
+  --hui-palette-primary-a30: #ab71f6;
+  --hui-palette-primary-a40: #bb88f8;
+  --hui-palette-primary-a50: #caa0fa;
 }
 
 .hot-pink {
   /** Dark theme primary colors */
-  --mui-palette-primary-a0: #ff0ea9;
-  --mui-palette-secondary-a0-hsl: hsl(321, 100%, 53%);
-  --mui-palette-primary-a10: #ff48b2;
-  --mui-palette-primary-a20: #ff67bc;
-  --mui-palette-primary-a30: #ff81c5;
-  --mui-palette-primary-a40: #ff98cf;
-  --mui-palette-primary-a50: #ffaed8;
+  --hui-palette-primary-a0: #ff0ea9;
+  --hui-palette-secondary-a0-hsl: hsl(321, 100%, 53%);
+  --hui-palette-primary-a10: #ff48b2;
+  --hui-palette-primary-a20: #ff67bc;
+  --hui-palette-primary-a30: #ff81c5;
+  --hui-palette-primary-a40: #ff98cf;
+  --hui-palette-primary-a50: #ffaed8;
 }
 
 .teal {
   /** Dark theme primary colors */
-  --mui-palette-primary-a0: #00daff;
-  --mui-palette-primary-a0-hsl: hsl(189, 100%, 50%);
-  --mui-palette-primary-a10: #4fdeff;
-  --mui-palette-primary-a20: #71e3ff;
-  --mui-palette-primary-a30: #8be7ff;
-  --mui-palette-primary-a40: #a2ebff;
-  --mui-palette-primary-a50: #b6efff;
+  --hui-palette-primary-a0: #00daff;
+  --hui-palette-primary-a0-hsl: hsl(189, 100%, 50%);
+  --hui-palette-primary-a10: #4fdeff;
+  --hui-palette-primary-a20: #71e3ff;
+  --hui-palette-primary-a30: #8be7ff;
+  --hui-palette-primary-a40: #a2ebff;
+  --hui-palette-primary-a50: #b6efff;
 
   /** Dark theme primary colors */
-  --mui-palette-secondary-a0: #ff0ea9;
-  --mui-palette-secondary-a0-hsl: hsl(321, 100%, 53%);
-  --mui-palette-secondary-a10: #ff48b2;
-  --mui-palette-secondary-a20: #ff67bc;
-  --mui-palette-secondary-a30: #ff81c5;
-  --mui-palette-secondary-a40: #ff98cf;
-  --mui-palette-secondary-a50: #ffaed8;
+  --hui-palette-secondary-a0: #ff0ea9;
+  --hui-palette-secondary-a0-hsl: hsl(321, 100%, 53%);
+  --hui-palette-secondary-a10: #ff48b2;
+  --hui-palette-secondary-a20: #ff67bc;
+  --hui-palette-secondary-a30: #ff81c5;
+  --hui-palette-secondary-a40: #ff98cf;
+  --hui-palette-secondary-a50: #ffaed8;
 }
 
 .green {
   /** Dark theme primary colors */
-  --mui-palette-primary-a0: #2dd4bf;
-  --mui-palette-primary-a0-hsl: hsl(172, 66%, 50%);
-  --mui-palette-primary-a10: #56d9c6;
-  --mui-palette-primary-a20: #72decd;
-  --mui-palette-primary-a30: #8ae3d4;
-  --mui-palette-primary-a40: #9fe8db;
-  --mui-palette-primary-a50: #b4ede2;
+  --hui-palette-primary-a0: #2dd4bf;
+  --hui-palette-primary-a0-hsl: hsl(172, 66%, 50%);
+  --hui-palette-primary-a10: #56d9c6;
+  --hui-palette-primary-a20: #72decd;
+  --hui-palette-primary-a30: #8ae3d4;
+  --hui-palette-primary-a40: #9fe8db;
+  --hui-palette-primary-a50: #b4ede2;
 }
 
 :root {
-  --mui-color-text-light-1: rgba(60, 60, 60, 0.87);
-  --mui-color-text-light-2: rgba(60, 60, 60, 0.7);
-  --mui-color-text-light-3: rgba(60, 60, 60, 0.33);
-  --mui-color-text-light-4: rgba(60, 60, 60, 0.18);
-  --mui-color-text-dark-1: rgba(255, 255, 255, 0.87);
-  --mui-color-text-dark-2: rgba(235, 235, 235, 0.6);
-  --mui-color-text-dark-3: rgba(235, 235, 235, 0.38);
-  --mui-color-text-dark-4: rgba(235, 235, 235, 0.18);
+  --hui-color-text-light-1: rgba(60, 60, 60, 0.87);
+  --hui-color-text-light-2: rgba(60, 60, 60, 0.7);
+  --hui-color-text-light-3: rgba(60, 60, 60, 0.33);
+  --hui-color-text-light-4: rgba(60, 60, 60, 0.18);
+  --hui-color-text-dark-1: rgba(255, 255, 255, 0.87);
+  --hui-color-text-dark-2: rgba(235, 235, 235, 0.6);
+  --hui-color-text-dark-3: rgba(235, 235, 235, 0.38);
+  --hui-color-text-dark-4: rgba(235, 235, 235, 0.18);
 }
 
 :root {
-  --mui-color-scrim-dark: #000000;
-  --mui-color-scrim: var(--mui-color-scrim-dark);
-  --mui-color-text-1: var(--mui-color-text-dark-1);
-  --mui-color-text-2: var(--mui-color-text-dark-2);
-  --mui-color-text-3: var(--mui-color-text-dark-3);
-  --mui-color-text-4: var(--mui-color-text-dark-4);
-  --mui-color-text-disabled: rgba(0, 0, 0, 0.28);
+  --hui-color-scrim-dark: #000000;
+  --hui-color-scrim: var(--hui-color-scrim-dark);
+  --hui-color-text-1: var(--hui-color-text-dark-1);
+  --hui-color-text-2: var(--hui-color-text-dark-2);
+  --hui-color-text-3: var(--hui-color-text-dark-3);
+  --hui-color-text-4: var(--hui-color-text-dark-4);
+  --hui-color-text-disabled: rgba(0, 0, 0, 0.28);
 }
 
 /* background: linear-gradient

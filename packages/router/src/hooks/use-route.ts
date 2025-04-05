@@ -9,7 +9,7 @@ export type Route = {
 };
 
 const RouteContext = createContext({} as Route);
-customElements.define('mui-route-context', RouteContext.Provider);
+customElements.define('hui-route-context', RouteContext.Provider);
 
 export const useRouteProvider = (params: unknown): Route => {
   const query = useSearchParams();
@@ -23,8 +23,8 @@ export const useRouteProvider = (params: unknown): Route => {
 
 const RouteProvider = ({ params }: { params: unknown }) => {
   const ctx = useRouteProvider(params || undefined);
-  return html`<mui-route-context .value=${ctx}><slot></slot></mui-route-context>`;
+  return html`<hui-route-context .value=${ctx}><slot></slot></hui-route-context>`;
 };
-customElements.define('mui-route-provider', component<Route & HTMLElement>(RouteProvider));
+customElements.define('hui-route-provider', component<Route & HTMLElement>(RouteProvider));
 
 export const useRoute = (): Route => useContext(RouteContext);

@@ -6,8 +6,8 @@ input:-webkit-autofill {
   background: red;
 }
 
-.mui-link {
-  color: var(--mui-color-text);
+.hui-link {
+  color: var(--hui-color-text);
   text-decoration: none;
 
   &:hover {

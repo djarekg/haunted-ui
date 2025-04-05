@@ -8,6 +8,6 @@
 @import "_defaults.css";
 
 .bg-primary {
-  color: var(--mui-color-primary);
-  background-color: var(--mui-palette-surface-a0);
+  color: var(--hui-color-primary);
+  background-color: var(--hui-palette-surface-a0);
 }

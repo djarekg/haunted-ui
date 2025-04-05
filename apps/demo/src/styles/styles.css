@@ -10,14 +10,14 @@ body {
   min-inline-size: 320px;
   min-block-size: 100vh;
 
-  font-family: var(--mui-typescale-body-large-font);
-  font-size: var(--mui-typescale-body-large-size);
-  font-weight: var(--mui-typescale-body-large-weight);
-  letter-spacing: var(--mui-typescale-body-large-tacking);
-  line-height: var(--mui-typescale-body-large-line-height);
+  font-family: var(--hui-typescale-body-large-font);
+  font-size: var(--hui-typescale-body-large-size);
+  font-weight: var(--hui-typescale-body-large-weight);
+  letter-spacing: var(--hui-typescale-body-large-tacking);
+  line-height: var(--hui-typescale-body-large-line-height);
 
-  background-color: var(--mui-color-secondary);
-  color: var(--mui-color-primary);
+  background-color: var(--hui-color-secondary);
+  color: var(--hui-color-primary);
   direction: ltr;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

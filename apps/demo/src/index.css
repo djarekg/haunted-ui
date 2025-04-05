@@ -1,7 +1,7 @@
 :host {
-  --mui-table-row-hover-color: #fff;
-  --mui-table-row-hover-background-color: rgba(0, 0, 0, 0.2);
-  --mui-table-background-color: var(--mui-palette-surface-a0);
+  --hui-table-row-hover-color: #fff;
+  --hui-table-row-hover-background-color: rgba(0, 0, 0, 0.2);
+  --hui-table-background-color: var(--hui-palette-surface-a0);
 
   display: block;
   block-size: 100%;

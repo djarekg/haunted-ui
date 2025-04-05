@@ -29,4 +29,4 @@ class RouterRedirect extends HTMLElement {
   }
 }
 
-customElements.define('mui-router-redirect', RouterRedirect);
+customElements.define('hui-router-redirect', RouterRedirect);
