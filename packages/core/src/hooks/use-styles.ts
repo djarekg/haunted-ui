@@ -1,78 +1,75 @@
-import { useCallback, useLayoutEffect } from 'haunted';
-import { type CSSResult, type LitElement, supportsAdoptingStyleSheets } from 'lit-element';
+import { Hook, type State, hook } from 'haunted';
+import type { CSSResult } from 'lit';
 import { compile, serialize, stringify } from 'stylis';
 
+import { useCache } from '../cache/index.js';
 import { hash } from '../crypto/hash.js';
-import { wrap } from '../dom/wrap.js';
+import { isEmpty } from '../utils/string.js';
 
-import { useHost } from './use-host.js';
+export const useStyles = hook(
+  class StylesHook extends Hook<[styles: CSSResult | CSSResult[]], void, Element> {
+    #el: State<Element>;
+    #styles: CSSResult | CSSResult[];
 
-/**
- * Applies styling to the element shadowRoot.
- *
- * @param {UseStylesOptions} options The options to use when applying styles.
- */
-export function useStyles(styles: CSSResult | CSSResult[]) {
-  const element = useHost();
+    constructor(id: number, el: State<Element>, styles: CSSResult | CSSResult[]) {
+      super(id, el);
+      this.#el = el;
+      this.#styles = styles || [];
+      this.updateStyles(this.#styles);
+    }
 
-  const adoptStyles = useCallback(
-    (el: Element) => {
-      // biome-ignore lint/style/noParameterAssign: We need to reassign the styles array is it is not an array.
-      styles = Array.isArray(styles) ? styles : [styles];
+    update(styles: CSSResult | CSSResult[]) {
+      this.#styles = styles || [];
+      this.updateStyles(this.#styles);
+    }
 
-      if (styles.length === 0) {
-        return;
-      }
+    updateStyles(styles: CSSResult | CSSResult[]) {
+      if (this.#el.host) {
+        if (isEmpty(styles)) {
+          return;
+        }
 
-      if (el.shadowRoot && supportsAdoptingStyleSheets) {
-        el.shadowRoot.adoptedStyleSheets = styles.map(style =>
-          style instanceof CSSStyleSheet ? style : style.styleSheet,
-        );
-      } else {
-        for (const style of styles) {
-          const newStyle = document.createElement('style');
+        const cache = useCache();
 
-          if (el.shadowRoot) {
-            newStyle.textContent = style.cssText;
-            el.shadowRoot.appendChild(newStyle);
-          } else {
-            /**
-             * If the element does not have a shadowRoot, it is not a custom element.
-             * In this case, we add the styles to the document head. But, we first check
-             * if the style is already in the document to avoid adding duplicate styles.
-             * We do this by hashing the style content and using the hash as the style id.
-             */
-            const id = `hui${hash(style.cssText).toString()}`;
+        for (const style of Array.isArray(styles) ? styles : [styles]) {
+          const isVirtual = this.#el.virtual;
+          let host = this.#el.host;
 
-            // If the style is not already in the document, add it.
-            if (!el.parentNode.querySelector(`#${id}`)) {
-              const serializedCss = serialize(compile(`.${id}{${style.cssText}}`), stringify);
-              newStyle.textContent = serializedCss;
-              newStyle.setAttribute('id', id);
-
-              let parent = el.parentNode;
-
-              const firstElement = parent.firstElementChild;
-              const wrapperElement = wrap(firstElement);
-              wrapperElement.classList.add(id);
-
-              // Look for the first parent that is a custom element.
-              while (!('host' in parent)) {
-                parent = parent.parentNode;
-              }
-
-              // Prepend all styles to the shadowRoot of the closest custom element.
-              if (parent.host) {
-                const host = parent.host as LitElement;
-                host.shadowRoot.prepend(newStyle);
-              }
+          // If element is a virtual component, then we need to find the
+          // closest custom element.
+          if (isVirtual) {
+            while (!host.shadowRoot) {
+              host = host.parentNode as Element;
             }
+          }
+
+          let hostId = host.getAttribute('hui-cache-id');
+
+          if (!hostId) {
+            hostId = crypto.randomUUID();
+            host.setAttribute('hui-cache-id', hostId);
+          }
+
+          const hostCache: string[] = cache.get(hostId) || [];
+          const id = `hui${hash(style.cssText).toString()}`;
+
+          if (!hostCache.includes(id)) {
+            // compile and serialize the css
+            const css = isVirtual ? `.${id}{${style.cssText}}` : style.cssText;
+            const serializedCss = serialize(compile(css), stringify);
+
+            const styleSheet = new CSSStyleSheet({ baseURL: id });
+            styleSheet.replaceSync(serializedCss);
+            host.shadowRoot.adoptedStyleSheets = [
+              ...(host.shadowRoot.adoptedStyleSheets || []),
+              styleSheet,
+            ];
+
+            hostCache.push(id);
+            cache.set(hostId, hostCache);
           }
         }
       }
-    },
-    [styles],
-  );
-
-  useLayoutEffect(() => adoptStyles(element), [styles]);
-}
+    }
+  },
+);

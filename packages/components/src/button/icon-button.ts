@@ -51,8 +51,9 @@ type IconButtonBaseProps = {
 const IconButton = ({ disabled, type = 'button' }: IconButtonBaseProps) => {
   useStyles([baseStyles, styles]);
 
+  const _this = useHost();
+
   useEffect(() => {
-    const _this = useHost();
     _this.classList.add('hui-button');
   });
 

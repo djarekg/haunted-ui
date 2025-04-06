@@ -4,6 +4,7 @@ import { map } from 'lit/directives/map.js';
 
 import { define, useHost, useStyles } from '@hui/core';
 
+import '../navigation-item/index.js';
 import type { NavigationItemEvent } from '../navigation-item/events.js';
 import type { NavItem } from '../navigation-item/types.js';
 import '../button/icon-button.js';
