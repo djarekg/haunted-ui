@@ -4,13 +4,11 @@ import { classMap } from 'lit/directives/class-map.js';
 
 import { define, useHost, useStyles } from '@hui/core';
 
-import '../icon/icon.js';
-
 import baseStyles from './button-base.css.js';
 
 const styles = css`
   :host  {
-    --_color: var(--hui-link-button-color, var(--hui-color-primary));
+    --_color: var(--hui-link-button-color, var(--hui-color-secondary));
     --_hover-color: var(--hui-link-button-hover-color, var(--hui-color-background-hover));
     --_font-size: var(--hui-link-button-font-size, 1rem);
     --_font-weight: var(--hui-link-button-font-weight, 500);
@@ -61,11 +59,12 @@ type LinkButtonBaseProps = {
  * @cssprop --hui-link-button-font-weight - The font weight of the button.
  * @cssprop --hui-link-button-align-items - The alignment of the button.
  */
-const LinkButton = ({ disabled, type = 'button', href }: LinkButtonBaseProps) => {
+const LinkButton = ({ disabled, type = 'button', href = '#' }: LinkButtonBaseProps) => {
   useStyles([baseStyles, styles]);
 
+  const _this = useHost();
+
   useEffect(() => {
-    const _this = useHost();
     _this.classList.add('hui-button');
   });
 

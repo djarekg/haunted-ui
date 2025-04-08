@@ -30,8 +30,9 @@ type OutlineButtonBaseProps = {
 const OutlineButton = ({ disabled, type = 'button' }: OutlineButtonBaseProps) => {
   useStyles([baseStyles, styles]);
 
+  const _this = useHost();
+
   useEffect(() => {
-    const _this = useHost();
     _this.classList.add('hui-button');
   });
 

@@ -22,8 +22,9 @@ type FlatButtonBaseProps = {
 export const FlatButton = ({ disabled, type = 'button' }: FlatButtonBaseProps) => {
   useStyles([baseStyles, styles]);
 
+  const _this = useHost();
+
   useEffect(() => {
-    const _this = useHost();
     _this.classList.add('hui-button');
   });
 

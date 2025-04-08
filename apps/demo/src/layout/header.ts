@@ -1,6 +1,8 @@
-import { html, useCallback } from 'haunted';
+import { html, useCallback, useMemo } from 'haunted';
 import { css } from 'lit';
 
+import '@hui/components/button/link-button.js';
+import '@hui/components/menu/index.js';
 import { define, useHost, useStyles } from '@hui/core';
 
 const styles = css`
@@ -27,6 +29,20 @@ const styles = css`
     font-size: 2.4rem;
     color: var(--hui-color-secondary);
   }
+
+  .menu-container {
+    display: flex;
+
+    img {
+      inline-size: 7rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-inline: 0;
+    margin-inline: 0;
+  }
 `;
 
 /**
@@ -48,6 +64,30 @@ export const Header = () => {
     );
   }, []);
 
+  const renderMenu = useMemo(
+    () => html`
+        <hui-menu icon="account_circle">
+          <div class="menu-container">
+            <div>
+              <img src="./public/hui-avatar.svg" alt="Profile" />
+            </div>
+            <ul>
+              <li>
+                <hui-link-button>Edit</hui-link-button>
+              </li>
+              <li>
+                <hui-link-button>Settings</hui-link-button>
+              </li>
+              <li>
+                <hui-link-button>Logout</hui-link-button>
+              </li>
+            </ul>
+          </div>
+        </hui-menu>
+      `,
+    [],
+  );
+
   return html`
     <header>
       <section>
@@ -55,7 +95,7 @@ export const Header = () => {
       </section>
       <span class="page-title">hui</span>
       <section>
-        <hui-icon-button>account_circle</hui-icon-button>
+        ${renderMenu}
       </section>
     </header>
   `;

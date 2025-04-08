@@ -33,8 +33,9 @@ type ButtonBaseProps = {
 export const Button = ({ disabled, type = 'button' }: ButtonBaseProps) => {
   useStyles([baseStyles, styles]);
 
+  const _this = useHost();
+
   useEffect(() => {
-    const _this = useHost();
     _this.classList.add('hui-button');
   });
 

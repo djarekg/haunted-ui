@@ -33,6 +33,7 @@ export const useStyles = hook(
 
         for (const style of Array.isArray(styles) ? styles : [styles]) {
           const isVirtual = this.#el.virtual;
+          const parentElement = this.#el.host.parentElement;
           let host = this.#el.host;
 
           // If element is a virtual component, then we need to find the
@@ -53,7 +54,12 @@ export const useStyles = hook(
           const hostCache: string[] = cache.get(hostId) || [];
           const id = `hui${hash(style.cssText).toString()}`;
 
+          // If the style is already applied, skip it.
           if (!hostCache.includes(id)) {
+            if (isVirtual) {
+              parentElement.classList.add(id);
+            }
+
             // compile and serialize the css
             const css = isVirtual ? `.${id}{${style.cssText}}` : style.cssText;
             const serializedCss = serialize(compile(css), stringify);
@@ -65,6 +71,7 @@ export const useStyles = hook(
               styleSheet,
             ];
 
+            // Add css hash id to the cache to prevent duplicates.
             hostCache.push(id);
             cache.set(hostId, hostCache);
           }
