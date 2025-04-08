@@ -6,3 +6,4 @@ build
 *.db
 **/prisma/img
 **/public/img/products
+bun.lock
