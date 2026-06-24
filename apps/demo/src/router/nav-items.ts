@@ -1,6 +1,5 @@
-import type { NavItem } from '@hui/components';
-
 import { routeType } from '@/router/route-type.js';
+import  type { NavItem } from '@hui/components';
 
 export default [
   {

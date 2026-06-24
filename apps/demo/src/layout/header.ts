@@ -66,7 +66,8 @@ export const Header = () => {
 
   const renderMenu = useMemo(
     () => html`
-        <hui-menu icon="account_circle">
+        <hui-menu 
+icon="account_circle">
           <div class="menu-container">
             <div>
               <img src="./public/hui-avatar.svg" alt="Profile" />

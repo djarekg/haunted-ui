@@ -15,7 +15,7 @@
     }
   ],
   "settings": {
-    "bun.runtime": "$HOME/.bun/bin/bun",
+    "bun.runtime": "${userHome}\\.bun\\bin\\bun",
     "bun.debugTerminal.enabled": true,
     "bun.debugTerminal.stopOnEntry": false,
     "npm.packageManager": "bun",
@@ -67,7 +67,7 @@
     "typescript.suggest.completeJSDocs": true,
     "typescript.suggest.includeCompletionsForImportStatements": true,
     "typescript.suggest.jsdoc.generateReturns": true,
-    "typescript.tsdk": "../node_modules/typescript/lib",
+    "typescript.tsdk": "root/node_modules/typescript/lib",
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "typescript.tsserver.experimental.enableProjectDiagnostics": true,
     "typescript.updateImportsOnFileMove.enabled": "prompt",
@@ -170,8 +170,8 @@
     "recommendations": [
       "biomejs.biome",
       "oven.bun-vscode",
-      "jspm.jspm-vscode",
-      "prisma.prisma-insider",
+      // "jspm.jspm-vscode",
+      "Prisma.prisma",
       "task.vscode-task",
       "runem.lit-plugin",
       "apollographql.vscode-apollo"
